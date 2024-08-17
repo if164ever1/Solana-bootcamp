@@ -20,3 +20,7 @@ const keyPair = Keypair.fromSecretKey(keyAsArray);
 
 console.log('Public key: ', keyPair.publicKey.toBase58());
 console.log('Secret key: ', keyPair.secretKey);
+
+// Convert Uint8Array to a hexadecimal string
+const secretKeyHex = Buffer.from(keyPair.secretKey).toString('hex');
+console.log('Secret key (hex):', secretKeyHex);
